@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dr. Maya Reynolds, PsyD — therapy practice website
 
-## Getting Started
+Front-end internship assignment for **Grow My Therapy** (Stage 2).
 
-First, run the development server:
+> **Training exercise.** The layout is a study clone of a publicly available
+> template site, rebuilt from scratch in Next.js for skills assessment.
+> **Dr. Maya Reynolds is a fictional therapist** supplied in the assignment brief.
+> No client branding, logos or photographs from the original site are used here,
+> and this site is not published on behalf of any real practice.
+
+## Stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS v4 — theme tokens declared in `src/app/globals.css`
+- `next/font` — Newsreader (display) + Mulish (body)
+
+## Structure
+
+| Path | What's in it |
+|---|---|
+| `src/app/globals.css` | **All colour and type tokens.** Nothing else hard-codes a hex |
+| `src/content/profile.ts` | **All site copy**, traceable to the therapist profile |
+| `src/components/sections.tsx` | Every page section |
+| `src/app/page.tsx` | Section order |
+| `public/images/` | Images — placeholders committed, replace before submitting |
+
+Re-theming the whole site means editing one block in `globals.css`.
+Rewriting the copy means editing one file.
+
+## Running it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npx tsc --noEmit # typecheck
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Assignment checklist
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Part 1 — clone**
+- [ ] Layout, section order and hierarchy match the original
+- [ ] Responsive on desktop, tablet and mobile
+- [ ] Typography matches (note: original display face is weight **300**)
+- [ ] Theme colours are reusable tokens, not hard-coded — *done, see globals.css*
+- [ ] Spacing and padding consistent throughout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Part 2 — redesign**
+- [ ] New palette chosen (primary / secondary / accent), replacing the original
+- [ ] All elements updated to the new colours, contrast checked
+- [ ] All copy rewritten from the profile — *placeholders marked `TODO` in `profile.ts`*
+- [ ] Three services chosen and described
+- [ ] SEO: location and specialty keywords in H1, headings and body
+- [ ] All images replaced; Maya's photo and a bio added
 
-## Learn More
+**Part 3 — new section**
+- [ ] "Our Office" section added — *scaffolded, copy still `TODO`*
 
-To learn more about Next.js, take a look at the following resources:
+**Part 4 — video**
+- [ ] 5-minute Loom client demo, desktop + mobile, non-technical language
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Deliverables:** live link · public repo · video link
