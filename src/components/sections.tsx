@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {
   therapist, hero, statement, whoWeHelp, pullQuote,
-  expertise, howWeWork, divider, services, office, closing,
+  expertise, howWeWork, divider, services, office, closing, about, faqs,
 } from "@/content/profile";
 
 /* Drop real files into /public/images and swap these paths.
@@ -132,6 +132,54 @@ export function PullQuote() {
       <p className="wrap max-w-3xl text-center text-surface text-[clamp(1.5rem,3.2vw,2.4rem)] font-[family-name:var(--font-display)] font-light leading-snug">
         {pullQuote}
       </p>
+    </section>
+  );
+}
+
+/* Bio + portrait — required by their checklist, absent from the original homepage. */
+export function About() {
+  return (
+    <section id="about-maya" className="section">
+      <div className="wrap grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] lg:items-start">
+        <div className="relative aspect-[4/5] w-full">
+          <Image src={IMG.portrait} alt={`${therapist.name}, ${therapist.credentials}`} fill sizes="(max-width:1024px) 100vw, 40vw" className="object-cover" />
+        </div>
+        <div>
+          <p className="eyebrow mb-6">{about.eyebrow}</p>
+          <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-8">{about.heading}</h2>
+          {about.bio.map((p, i) => (
+            <p key={i} className="text-ink-soft mb-5 max-w-[60ch]">{p}</p>
+          ))}
+          <ul className="mt-8 border-t border-line pt-8 space-y-2">
+            {about.credentials.map((cr) => (
+              <li key={cr} className="eyebrow text-ink">{cr}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Native <details> — accessible and keyboard-operable with no JavaScript. */
+export function Faqs() {
+  return (
+    <section id="faqs" className="section">
+      <div className="wrap max-w-3xl">
+        <p className="eyebrow mb-6">Questions</p>
+        <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-10">Before you reach out</h2>
+        <div className="border-t border-line">
+          {faqs.map((f) => (
+            <details key={f.q} className="group border-b border-line py-6">
+              <summary className="flex items-start justify-between gap-6 cursor-pointer list-none text-xl font-[family-name:var(--font-display)] font-light">
+                {f.q}
+                <span className="shrink-0 text-accent transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <p className="text-ink-soft mt-4 max-w-[62ch]">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

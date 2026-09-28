@@ -52,6 +52,10 @@ npx tsc --noEmit # typecheck
 - [ ] SEO: location and specialty keywords in H1, headings and body
 - [ ] All images replaced; Maya's photo and a bio added
 
+**Extra sections their checklist requires (absent from the original homepage)**
+- [x] About section with Maya's portrait and bio — *scaffolded, copy `TODO`*
+- [x] FAQs — *scaffolded, two answers still `TODO`*
+
 **Part 3 — new section**
 - [ ] "Our Office" section added — *scaffolded, copy still `TODO`*
 

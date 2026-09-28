@@ -1,6 +1,6 @@
 import {
-  SiteNav, Hero, StatementBlock, WhoWeHelp, PullQuote, Expertise,
-  HowWeWork, DividerStatement, Specialties, OurOffice, ClosingCta, SiteFooter,
+  SiteNav, Hero, StatementBlock, WhoWeHelp, PullQuote, About, Expertise,
+  HowWeWork, DividerStatement, Specialties, OurOffice, Faqs, ClosingCta, SiteFooter,
 } from "@/components/sections";
 
 export default function Home() {
@@ -12,11 +12,13 @@ export default function Home() {
         <StatementBlock />
         <WhoWeHelp />
         <PullQuote />
+        <About />
         <Expertise />
         <HowWeWork />
         <DividerStatement />
         <Specialties />
         <OurOffice />
+        <Faqs />
         <ClosingCta />
       </main>
       <SiteFooter />

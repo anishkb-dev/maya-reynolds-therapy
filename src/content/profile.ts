@@ -101,6 +101,47 @@ export const services = [
   },
 ];
 
+/* Their checklist: "I have added Maya's picture and created a bio using
+   from her profile." The original keeps the bio on a separate About page,
+   so it folds into the homepage here. */
+export const about = {
+  eyebrow: "About",
+  heading: "TODO — a warm heading introducing her. Not 'About Me'.",
+  bio: [
+    "TODO — first paragraph. Who she is and who she works with: a licensed clinical psychologist in Santa Monica working with adults, often high-achieving professionals, creatives and entrepreneurs.",
+    "TODO — second paragraph. Her approach in her own voice: warm, collaborative and grounded; clients actively involved rather than talked at; trauma work that leads with safety and stabilization.",
+    "TODO — third paragraph. What she's working toward with people: past symptom relief, toward insight, resilience and a stronger relationship with themselves.",
+  ],
+  credentials: [
+    "PsyD, Licensed Clinical Psychologist",
+    "EMDR for trauma",
+    "Cognitive behavioural therapy",
+    "Mindfulness & body-oriented practice",
+  ],
+};
+
+/* Named in their copywriting checklist ("About, FAQs, and other sections").
+   Only answer what the profile actually supports — do not invent fees,
+   insurance or session lengths that aren't in the document. */
+export const faqs = [
+  {
+    q: "Do you offer online sessions?",
+    a: "Yes — secure telehealth is available to anyone living in California, alongside in-person sessions at the Santa Monica office.",
+  },
+  {
+    q: "What happens in a first session?",
+    a: "TODO — keep it calm and concrete. Reduce the fear of the unknown.",
+  },
+  {
+    q: "What is EMDR, and will I have to relive my trauma?",
+    a: "TODO — the profile says trauma work leads with safety, stabilization and helping people feel regulated. That is the reassurance to give.",
+  },
+  {
+    q: "Who do you usually work with?",
+    a: "TODO — adults who are functional on the outside and struggling underneath; high-achieving professionals, creatives and entrepreneurs.",
+  },
+];
+
 // Part 3 — the section that does NOT exist in the original template.
 export const office = {
   eyebrow: "The space",
