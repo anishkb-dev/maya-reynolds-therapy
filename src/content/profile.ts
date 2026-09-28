@@ -42,28 +42,28 @@ export const statement = {
   lead: "You're managing everything, and quietly running on empty.",
   eyebrow: "That gap between how you seem and how you feel is worth taking seriously.",
   body: [
-    "TODO — two short paragraphs. Keep every claim traceable to the profile: warm, collaborative and grounded; clients are actively involved rather than talked at; the work goes past symptom relief toward insight, resilience and a stronger relationship with themselves.",
-    "TODO — second paragraph. Mention Santa Monica once and telehealth for California residents once. Don't repeat the city more than the page already does.",
+    "Most of the people I work with are doing well by every outside measure. They meet the deadline, hold the team together, answer the message at midnight. Underneath it there's a low hum — bracing, overthinking, never quite off duty. You can carry that for years before it occurs to you that it isn't just how you're built.",
+    "Therapy here is collaborative. I'll tell you what I'm noticing and why, and you can tell me when I've got it wrong. We go at a pace you set. Sessions are in person in Santa Monica, or by secure video anywhere in California.",
   ],
 };
 
 export const whoWeHelp = [
   {
     title: "Professionals & executives",
-    body: "TODO — high-achieving people holding a lot together. Draw from the profile's 'functional outside, struggling inside'.",
+    body: "You're the one who holds it together at work, and you're tired in a way that sleep doesn't fix. We look at what's driving the pressure, not just how to absorb more of it.",
   },
   {
     title: "Creatives & entrepreneurs",
-    body: "TODO — the profile names creatives and entrepreneurs who feel disconnected from themselves.",
+    body: "The work is going well and you feel strangely far from it. We work on getting you back in contact with your own judgement, and with why you started.",
   },
   {
     title: "Adults working through trauma",
-    body: "TODO — single-incident or complex trauma. Lead with safety and stabilization, not excavation.",
+    body: "Something happened, or a great many things did, and your body still behaves as though it's happening. We begin with safety and steadiness — not with being made to relive it.",
   },
 ];
 
 export const pullQuote =
-  "TODO — one line, warm and human. Think about what a person needs to read at the moment they are deciding whether to reach out.";
+  "You don't have to be in crisis to deserve help. Tired is enough.";
 
 // Straight from the profile's specialties and modalities.
 export const expertise = [
@@ -76,14 +76,14 @@ export const howWeWork = {
   eyebrow: "How we work together",
   heading: "Collaborative, grounded, and paced by you.",
   body: [
-    "TODO — the profile says clients should feel respected, understood and actively involved in the process. Say that in plain words, not jargon.",
-    "TODO — name the modalities here (CBT, EMDR, mindfulness, body-oriented) as tools rather than a list of credentials.",
+    "You'll be an active part of this rather than a patient being treated. I'll explain what I'm doing and why, and I'd rather you pushed back than nodded along. The work is yours; I'm the person who knows the terrain.",
+    "What that looks like depends on you. Cognitive behavioural work for the thoughts that loop. EMDR when a memory still has a grip. Mindfulness and body-based practice for the part of this that lives below language — the jaw, the shoulders, the held breath.",
   ],
   cta: "More about my approach",
 };
 
 export const divider =
-  "TODO — one serif line echoing the profile's goal: insight, resilience, and a stronger relationship with yourself.";
+  "The goal isn't only that the symptoms quiet down. It's that you end up on better terms with yourself.";
 
 // Brief says pick THREE services. The template shows four — use three.
 export const services = [
@@ -106,11 +106,11 @@ export const services = [
    so it folds into the homepage here. */
 export const about = {
   eyebrow: "About",
-  heading: "TODO — a warm heading introducing her. Not 'About Me'.",
+  heading: "I'm Maya.",
   bio: [
-    "TODO — first paragraph. Who she is and who she works with: a licensed clinical psychologist in Santa Monica working with adults, often high-achieving professionals, creatives and entrepreneurs.",
-    "TODO — second paragraph. Her approach in her own voice: warm, collaborative and grounded; clients actively involved rather than talked at; trauma work that leads with safety and stabilization.",
-    "TODO — third paragraph. What she's working toward with people: past symptom relief, toward insight, resilience and a stronger relationship with themselves.",
+    "I'm a licensed clinical psychologist in Santa Monica. I work with adults on anxiety, panic, trauma and burnout — often people who are high-achieving and privately exhausted: professionals carrying a lot, creatives, people running their own thing.",
+    "My approach is warm and fairly direct. I'll ask real questions and tell you what I actually think. You'll know what we're doing and why at each stage, and if something isn't working we change it.",
+    "I trained in cognitive behavioural therapy, EMDR, mindfulness and body-oriented practice, and I draw on whichever suits the person in front of me. What I'm working toward with people is more than relief from the symptoms — insight that stays with you, resilience you can feel, and a steadier relationship with yourself.",
   ],
   credentials: [
     "PsyD, Licensed Clinical Psychologist",
@@ -130,15 +130,15 @@ export const faqs = [
   },
   {
     q: "What happens in a first session?",
-    a: "TODO — keep it calm and concrete. Reduce the fear of the unknown.",
+    a: "Mostly I listen. You tell me what brought you here, in whatever order it comes out, and I ask questions to understand the shape of it. By the end we'll have a sense of what we would work on together. There is nothing to prepare.",
   },
   {
     q: "What is EMDR, and will I have to relive my trauma?",
-    a: "TODO — the profile says trauma work leads with safety, stabilization and helping people feel regulated. That is the reassurance to give.",
+    a: "No. EMDR doesn't require you to narrate the worst of it. We build stability first — practical ways to settle your body and stay present — and only then work with the memory itself, at a pace you control. If it becomes too much, we stop and steady.",
   },
   {
     q: "Who do you usually work with?",
-    a: "TODO — adults who are functional on the outside and struggling underneath; high-achieving professionals, creatives and entrepreneurs.",
+    a: "Adults, mostly people who look like they're managing. Professionals carrying more than they let on, creatives and founders who feel disconnected from their own work, and people living with trauma — whether one event or many years of them.",
   },
 ];
 
@@ -147,8 +147,8 @@ export const office = {
   eyebrow: "The space",
   heading: "A quiet room, and enough natural light to think in.",
   body: [
-    "TODO — describe the office from the profile: quiet, private, natural light. Concrete detail beats 'safe space', which is on every therapist site alive.",
-    "TODO — one line on the choice between in-person in Santa Monica and secure telehealth anywhere in California.",
+    "The office is a quiet room with good natural light and a door that closes properly. No clinical fluorescents, no waiting room full of people avoiding each other's eyes.",
+    "Some people want that room. Others would rather be at home with their own door shut. Both work — sessions are in person here, or by secure video anywhere in California.",
   ],
   details: [
     { label: "In person", value: `${therapist.address}` },
@@ -158,7 +158,7 @@ export const office = {
 
 export const closing = {
   eyebrow: "Getting started",
-  heading: "TODO — a warm closing heading, not a hard sell.",
-  body: "TODO — short paragraph lowering the stakes of the first contact. Name what actually happens on the 15-minute call.",
+  heading: "Start with a conversation, not a commitment.",
+  body: "A free 15-minute call, by phone or video. You tell me briefly what's going on, I tell you honestly whether I'm the right person for it, and if I'm not, I'll point you toward someone who is. No pressure either way.",
   cta: "Book a free 15-minute call",
 };
