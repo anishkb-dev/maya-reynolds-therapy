@@ -47,8 +47,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${newsreader.variable} ${mulish.variable}`}>{children}</body>
+    <html lang="en" className={`${newsreader.variable} ${mulish.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

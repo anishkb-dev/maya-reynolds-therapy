@@ -27,7 +27,7 @@ export function SiteNav() {
     <header className="sticky top-0 z-50 bg-surface/90 backdrop-blur border-b border-line">
       <nav className="wrap flex items-center justify-between py-5">
         <a href="#" className="leading-tight">
-          <span className="block font-[family-name:var(--font-display)] text-xl">
+          <span className="block font-[family-name:var(--font-newsreader)] text-xl">
             {therapist.name}
           </span>
           <span className="eyebrow text-[0.625rem]">{therapist.title}</span>
@@ -129,7 +129,7 @@ export function PullQuote() {
         className="object-cover -z-10"
       />
       <div className="absolute inset-0 -z-10 bg-ink/35" />
-      <p className="wrap max-w-3xl text-center text-surface text-[clamp(1.5rem,3.2vw,2.4rem)] font-[family-name:var(--font-display)] font-light leading-snug">
+      <p className="wrap max-w-3xl text-center text-surface text-[clamp(1.5rem,3.2vw,2.4rem)] font-[family-name:var(--font-newsreader)] font-light leading-snug">
         {pullQuote}
       </p>
     </section>
@@ -171,7 +171,7 @@ export function Faqs() {
         <div className="border-t border-line">
           {faqs.map((f) => (
             <details key={f.q} className="group border-b border-line py-6">
-              <summary className="flex items-start justify-between gap-6 cursor-pointer list-none text-xl font-[family-name:var(--font-display)] font-light">
+              <summary className="flex items-start justify-between gap-6 cursor-pointer list-none text-xl font-[family-name:var(--font-newsreader)] font-light">
                 {f.q}
                 <span className="shrink-0 text-accent transition-transform group-open:rotate-45" aria-hidden="true">+</span>
               </summary>
@@ -229,7 +229,7 @@ export function DividerStatement() {
   return (
     <section className="section">
       <div className="wrap grid gap-12 lg:grid-cols-2 lg:items-center">
-        <p className="text-[clamp(1.5rem,3vw,2.15rem)] font-[family-name:var(--font-display)] font-light leading-snug">
+        <p className="text-[clamp(1.5rem,3vw,2.15rem)] font-[family-name:var(--font-newsreader)] font-light leading-snug">
           {divider}
         </p>
         <div className="relative aspect-[781/539] w-full">
@@ -328,7 +328,7 @@ export function SiteFooter() {
     <footer className="border-t border-line py-12">
       <div className="wrap flex flex-col md:flex-row gap-6 justify-between text-ink-soft text-sm">
         <div>
-          <p className="font-[family-name:var(--font-display)] text-lg text-ink">
+          <p className="font-[family-name:var(--font-newsreader)] text-lg text-ink">
             {therapist.name}, {therapist.credentials}
           </p>
           <p>{therapist.title}</p>
