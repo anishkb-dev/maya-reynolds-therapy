@@ -62,7 +62,7 @@ export function Hero() {
         <p className="eyebrow mb-8">{hero.eyebrow}</p>
         <h1 className="text-[clamp(2.5rem,6vw,4.25rem)] leading-[1.16] mb-8">
           {hero.headingBefore}{" "}
-          <span className="text-accent italic">{hero.headingAccent}</span>{" "}
+          <span className="text-accent-ink italic">{hero.headingAccent}</span>{" "}
           {hero.headingAfter}
         </h1>
         <p className="max-w-[46ch] text-ink-soft mb-10">{hero.sub}</p>
