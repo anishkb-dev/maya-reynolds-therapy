@@ -94,11 +94,25 @@ warm, desaturated band was rejected. Nine of twenty-four candidates passed.
 | office-1 | 1754037783 | armchair by a window with plants — the therapy room |
 | office-2 | 1637412816 | reused, square crop |
 
-### Worth replacing before submitting
+### The profile document supplies three images — use them
 
-1. **maya** — an outdoor candid, not a professional portrait. A therapist's
-   headshot is the one image a visitor studies. Search "professional woman
-   portrait office natural light".
+Exporting the Google Doc as a zip (`/export?format=zip`) yields an
+`images/` folder the plain-text view hides:
+
+| File | What it is | Installed as |
+|---|---|---|
+| `image1.png` 1024×1536 | **Maya's professional headshot** | `maya.jpg` |
+| `image2.jpg` 1500×1125 | **Her office**, wide view | `office-1.jpg` |
+| `image3.jpg` 1500×1125 | **Her office**, second angle | `office-2.jpg` |
+
+This is not optional — their checklist says *"I have used relevant images
+of the office from [the profile]"* and *"I have added Maya's picture"*.
+Stock substitutes would have been marked down.
+
+The headshot is top-cropped rather than centre-cropped, so her head stays
+in frame at 4:5.
+
+### Worth replacing before submitting
 2. ~~who-2 and who-3~~ — **fixed 2026-09-28.** The first trio was three
    unrelated studio portraits: lightness 30, 63 and 74, three different
    backgrounds, three different moods. Re-picked against a coherence score
@@ -111,5 +125,8 @@ warm, desaturated band was rejected. Nine of twenty-four candidates passed.
    twenty candidates came back under 30% lightness, which will never sit on
    a cream page. Searching for the *light* rather than the *subject* is what
    produced a usable set.
-3. **office-2** — reuses the hero-strip photo at a different crop. Fine as a
-   placeholder, obvious if anyone looks twice.
+~~3. office-2 reuses the hero-strip photo~~ — **fixed**: now her real office.
+
+Remaining: nothing critical. The stock images that stay (hero, who-trio,
+quote band, approach, divider, closing) are atmosphere, which is what the
+original template uses them for too.
