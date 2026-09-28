@@ -216,8 +216,10 @@ export function HowWeWork() {
           </div>
           <a href="#contact" className="link-cta inline-block mt-7">{howWeWork.cta}</a>
         </div>
-        {/* original: 331x696 tall narrow image, right */}
-        <div className="relative aspect-[331/696] w-full">
+        {/* Original is a tall narrow image. Locking the aspect made the section
+            ~880px tall against ~300px of text, leaving a dead half-screen, so the
+            image stretches to the text column's height instead and crops. */}
+        <div className="relative w-full min-h-[22rem] lg:min-h-full">
           <Image src={IMG.approach} alt="" fill sizes="(max-width:1024px) 100vw, 25vw" className="object-cover" />
         </div>
       </div>
