@@ -19,6 +19,7 @@ const IMG = {
   portrait: "/images/maya.jpg",
   office1: "/images/office-1.jpg",
   office2: "/images/office-2.jpg",
+  statement: "/images/statement.jpg",   // 443x631 (0.70)
 };
 
 export function SiteNav() {
@@ -32,7 +33,7 @@ export function SiteNav() {
           </span>
           <span className="eyebrow text-[0.625rem]">{therapist.title}</span>
         </a>
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-7">
           {links.map((l) => (
             <li key={l}>
               <a href={`#${l.toLowerCase()}`} className="eyebrow hover:text-accent transition-colors">
@@ -54,7 +55,7 @@ export function SiteNav() {
 
 export function Hero() {
   return (
-    <section className="wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)_minmax(0,0.45fr)] lg:items-center py-16 lg:py-24">
+    <section className="wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)_minmax(0,0.45fr)] lg:items-center py-8 lg:py-12">
       <div className="relative aspect-[3/4] w-full">
         <Image src={IMG.heroMain} alt="" fill sizes="(max-width:1024px) 100vw, 30vw" className="object-cover" priority />
       </div>
@@ -65,7 +66,7 @@ export function Hero() {
           <span className="text-accent-ink italic">{hero.headingAccent}</span>{" "}
           {hero.headingAfter}
         </h1>
-        <p className="max-w-[46ch] text-ink-soft mb-10">{hero.sub}</p>
+        <p className="max-w-[46ch] text-ink-soft mb-7">{hero.sub}</p>
         <a href="#contact" className="link-cta inline-block">{hero.cta}</a>
       </div>
       <div className="relative hidden lg:block aspect-[2/3] w-full">
@@ -80,7 +81,7 @@ export function StatementBlock() {
     <section id="about" className="section bg-secondary">
       <div className="wrap max-w-4xl">
         <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-6">{statement.lead}</h2>
-        <p className="eyebrow mb-8">{statement.eyebrow}</p>
+        <p className="eyebrow mb-6">{statement.eyebrow}</p>
         {statement.body.map((p, i) => (
           <p key={i} className="text-ink-soft mb-5 max-w-[62ch]">{p}</p>
         ))}
@@ -93,8 +94,8 @@ export function WhoWeHelp() {
   return (
     <section className="section">
       <div className="wrap">
-        <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-12">Who I work with</h2>
-        <div className="grid gap-10 md:grid-cols-3">
+        <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-7">Who I work with</h2>
+        <div className="grid gap-8 md:grid-cols-3">
           {whoWeHelp.map((c, i) => (
             <div key={c.title}>
               {/* original: 370x421 per column */}
@@ -140,7 +141,7 @@ export function PullQuote() {
 export function About() {
   return (
     <section id="about-maya" className="section">
-      <div className="wrap grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] lg:items-start">
+      <div className="wrap grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] lg:items-start">
         <div className="relative aspect-[4/5] w-full">
           <Image src={IMG.portrait} alt={`${therapist.name}, ${therapist.credentials}`} fill sizes="(max-width:1024px) 100vw, 40vw" className="object-cover" />
         </div>
@@ -150,7 +151,7 @@ export function About() {
           {about.bio.map((p, i) => (
             <p key={i} className="text-ink-soft mb-5 max-w-[60ch]">{p}</p>
           ))}
-          <ul className="mt-8 border-t border-line pt-8 space-y-2">
+          <ul className="mt-7 border-t border-line pt-6 space-y-2">
             {about.credentials.map((cr) => (
               <li key={cr} className="eyebrow text-ink">{cr}</li>
             ))}
@@ -167,10 +168,10 @@ export function Faqs() {
     <section id="faqs" className="section">
       <div className="wrap max-w-3xl">
         <p className="eyebrow mb-6">Questions</p>
-        <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-10">Before you reach out</h2>
+        <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-7">Before you reach out</h2>
         <div className="border-t border-line">
           {faqs.map((f) => (
-            <details key={f.q} className="group border-b border-line py-6">
+            <details key={f.q} className="group border-b border-line py-5">
               <summary className="flex items-start justify-between gap-6 cursor-pointer list-none text-xl font-[family-name:var(--font-newsreader)] font-light">
                 {f.q}
                 <span className="shrink-0 text-accent transition-transform group-open:rotate-45" aria-hidden="true">+</span>
@@ -186,9 +187,9 @@ export function Faqs() {
 
 export function Expertise() {
   return (
-    <section className="section bg-secondary">
+    <section className="bg-secondary py-[clamp(2rem,3.5vw,3.25rem)]">
       <div className="wrap">
-        <p className="eyebrow mb-8">Areas of focus</p>
+        <p className="eyebrow mb-6">Areas of focus</p>
         <ul className="flex flex-wrap gap-x-8 gap-y-4">
           {expertise.map((e) => (
             <li key={e} className="eyebrow text-ink text-sm">{e}</li>
@@ -203,17 +204,17 @@ export function Expertise() {
 export function HowWeWork() {
   return (
     <section id="approach" className="section bg-secondary">
-      <div className="wrap grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.42fr)] lg:items-start">
+      <div className="wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.42fr)] lg:items-start">
         <div>
           <p className="eyebrow mb-6">{howWeWork.eyebrow}</p>
-          <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-10">{howWeWork.heading}</h2>
+          <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-7">{howWeWork.heading}</h2>
           {/* original splits the body into two columns side by side */}
           <div className="grid gap-8 md:grid-cols-2">
             {howWeWork.body.map((p, i) => (
               <p key={i} className="text-ink-soft">{p}</p>
             ))}
           </div>
-          <a href="#contact" className="link-cta inline-block mt-10">{howWeWork.cta}</a>
+          <a href="#contact" className="link-cta inline-block mt-7">{howWeWork.cta}</a>
         </div>
         {/* original: 331x696 tall narrow image, right */}
         <div className="relative aspect-[331/696] w-full">
@@ -228,7 +229,7 @@ export function HowWeWork() {
 export function DividerStatement() {
   return (
     <section className="section">
-      <div className="wrap grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div className="wrap grid gap-9 lg:grid-cols-2 lg:items-center">
         <p className="text-[clamp(1.5rem,3vw,2.15rem)] font-[family-name:var(--font-newsreader)] font-light leading-snug">
           {divider}
         </p>
@@ -244,10 +245,10 @@ export function Specialties() {
   return (
     <section id="specialties" className="section">
       <div className="wrap">
-        <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-12">Specialties</h2>
+        <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-8">Specialties</h2>
         <div className="grid gap-8 md:grid-cols-3">
           {services.map((s) => (
-            <article key={s.title} className="bg-surface-2 border border-line p-8">
+            <article key={s.title} className="bg-surface-2 border border-line p-7">
               <h3 className="text-2xl mb-4">{s.title}</h3>
               <p className="text-ink-soft mb-6">{s.body}</p>
               <a href="#contact" className="link-cta inline-block">Learn more</a>
@@ -263,14 +264,14 @@ export function Specialties() {
 export function OurOffice() {
   return (
     <section id="office" className="section bg-secondary">
-      <div className="wrap grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div className="wrap grid gap-9 lg:grid-cols-2 lg:items-center">
         <div>
           <p className="eyebrow mb-6">{office.eyebrow}</p>
           <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-6">{office.heading}</h2>
           {office.body.map((p, i) => (
             <p key={i} className="text-ink-soft mb-5 max-w-[52ch]">{p}</p>
           ))}
-          <dl className="mt-8 space-y-4 border-t border-line pt-8">
+          <dl className="mt-8 space-y-3 border-t border-line pt-6">
             {office.details.map((d) => (
               <div key={d.label}>
                 <dt className="eyebrow mb-1">{d.label}</dt>
@@ -306,7 +307,7 @@ export function ClosingCta() {
         <div className="text-center">
           <p className="eyebrow mb-6">{closing.eyebrow}</p>
           <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-6">{closing.heading}</h2>
-          <p className="text-ink-soft mb-10 max-w-[48ch] mx-auto">{closing.body}</p>
+          <p className="text-ink-soft mb-7 max-w-[48ch] mx-auto">{closing.body}</p>
           <a
             href="mailto:hello@example.com"
             className="eyebrow !text-surface inline-block bg-primary px-8 py-4 hover:bg-accent transition-colors"
@@ -325,7 +326,7 @@ export function ClosingCta() {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line py-12">
+    <footer className="border-t border-line py-10">
       <div className="wrap flex flex-col md:flex-row gap-6 justify-between text-ink-soft text-sm">
         <div>
           <p className="font-[family-name:var(--font-newsreader)] text-lg text-ink">
