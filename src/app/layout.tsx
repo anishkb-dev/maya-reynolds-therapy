@@ -5,17 +5,19 @@ import "./globals.css";
 // Original uses Beaufort Pro (Adobe Fonts, paid) + Muli.
 // Newsreader is the closest free transitional serif with a real 300 weight;
 // Mulish is Muli, renamed on Google Fonts.
+// Both are variable fonts, so no `weight` — every weight comes with them.
+// Passing a weight array makes Turbopack emit multiple font entries it
+// can't resolve ("queries have exactly one entry"), which builds fine on
+// webpack locally and fails on Vercel.
 const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
   display: "swap",
 });
 
 const mulish = Mulish({
   variable: "--font-mulish",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
   display: "swap",
 });
 
