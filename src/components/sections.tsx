@@ -8,8 +8,14 @@ import {
    Image choice is called out as "a major evaluation factor" — pick
    photographs that match the palette and the section's message. */
 const IMG = {
-  heroMain: "/images/hero-main.jpg",
-  heroStrip: "/images/hero-strip.jpg",
+  heroMain: "/images/hero-main.jpg",       // 504x578  (0.87)
+  heroStrip: "/images/hero-strip.jpg",     // 117x382  (0.31)
+  who: ["/images/who-1.jpg", "/images/who-2.jpg", "/images/who-3.jpg"], // 370x421 (0.88)
+  quoteBand: "/images/quote-band.jpg",     // 1462x575 (2.54) full-bleed
+  approach: "/images/approach.jpg",        // 331x696  (0.48) tall
+  divider: "/images/divider.jpg",          // 781x539  (1.45)
+  closingNarrow: "/images/closing-narrow.jpg", // 173x492 (0.35)
+  closingMain: "/images/closing-main.jpg",     // 504x610 (0.83)
   portrait: "/images/maya.jpg",
   office1: "/images/office-1.jpg",
   office2: "/images/office-2.jpg",
@@ -89,8 +95,18 @@ export function WhoWeHelp() {
       <div className="wrap">
         <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-12">Who I work with</h2>
         <div className="grid gap-10 md:grid-cols-3">
-          {whoWeHelp.map((c) => (
+          {whoWeHelp.map((c, i) => (
             <div key={c.title}>
+              {/* original: 370x421 per column */}
+              <div className="relative aspect-[370/421] mb-6">
+                <Image
+                  src={IMG.who[i]}
+                  alt=""
+                  fill
+                  sizes="(max-width:768px) 100vw, 30vw"
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-2xl mb-3">{c.title}</h3>
               <p className="text-ink-soft">{c.body}</p>
             </div>
@@ -101,10 +117,19 @@ export function WhoWeHelp() {
   );
 }
 
+/* Original: full-bleed 1462x575 image with the line set over it. */
 export function PullQuote() {
   return (
-    <section className="section">
-      <p className="wrap max-w-3xl text-center text-[clamp(1.5rem,3vw,2.15rem)] font-[family-name:var(--font-display)] font-light leading-snug">
+    <section className="relative isolate flex items-center min-h-[clamp(20rem,40vw,36rem)]">
+      <Image
+        src={IMG.quoteBand}
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover -z-10"
+      />
+      <div className="absolute inset-0 -z-10 bg-ink/35" />
+      <p className="wrap max-w-3xl text-center text-surface text-[clamp(1.5rem,3.2vw,2.4rem)] font-[family-name:var(--font-display)] font-light leading-snug">
         {pullQuote}
       </p>
     </section>
@@ -129,25 +154,40 @@ export function Expertise() {
 
 export function HowWeWork() {
   return (
-    <section id="approach" className="section">
-      <div className="wrap max-w-4xl">
-        <p className="eyebrow mb-6">{howWeWork.eyebrow}</p>
-        <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-8">{howWeWork.heading}</h2>
-        {howWeWork.body.map((p, i) => (
-          <p key={i} className="text-ink-soft mb-5 max-w-[62ch]">{p}</p>
-        ))}
-        <a href="#contact" className="link-cta inline-block mt-4">{howWeWork.cta}</a>
+    <section id="approach" className="section bg-secondary">
+      <div className="wrap grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.42fr)] lg:items-start">
+        <div>
+          <p className="eyebrow mb-6">{howWeWork.eyebrow}</p>
+          <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-10">{howWeWork.heading}</h2>
+          {/* original splits the body into two columns side by side */}
+          <div className="grid gap-8 md:grid-cols-2">
+            {howWeWork.body.map((p, i) => (
+              <p key={i} className="text-ink-soft">{p}</p>
+            ))}
+          </div>
+          <a href="#contact" className="link-cta inline-block mt-10">{howWeWork.cta}</a>
+        </div>
+        {/* original: 331x696 tall narrow image, right */}
+        <div className="relative aspect-[331/696] w-full">
+          <Image src={IMG.approach} alt="" fill sizes="(max-width:1024px) 100vw, 25vw" className="object-cover" />
+        </div>
       </div>
     </section>
   );
 }
 
+/* Original: a single serif line alongside one large 781x539 image. */
 export function DividerStatement() {
   return (
-    <section className="py-20 bg-primary text-surface">
-      <p className="wrap max-w-3xl text-center text-[clamp(1.5rem,3vw,2.15rem)] font-[family-name:var(--font-display)] font-light leading-snug">
-        {divider}
-      </p>
+    <section className="section">
+      <div className="wrap grid gap-12 lg:grid-cols-2 lg:items-center">
+        <p className="text-[clamp(1.5rem,3vw,2.15rem)] font-[family-name:var(--font-display)] font-light leading-snug">
+          {divider}
+        </p>
+        <div className="relative aspect-[781/539] w-full">
+          <Image src={IMG.divider} alt="" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
+        </div>
+      </div>
     </section>
   );
 }
@@ -209,17 +249,27 @@ export function OurOffice() {
 
 export function ClosingCta() {
   return (
-    <section id="contact" className="section bg-primary text-surface">
-      <div className="wrap max-w-2xl text-center">
-        <p className="eyebrow !text-surface/70 mb-6">{closing.eyebrow}</p>
-        <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-6">{closing.heading}</h2>
-        <p className="text-surface/80 mb-10">{closing.body}</p>
-        <a
-          href="mailto:hello@example.com"
-          className="eyebrow !text-primary inline-block bg-surface px-8 py-4 hover:bg-accent hover:!text-surface transition-colors"
-        >
-          {closing.cta}
-        </a>
+    <section id="contact" className="section">
+      <div className="wrap grid gap-10 lg:grid-cols-[minmax(0,0.3fr)_minmax(0,1fr)_minmax(0,0.75fr)] lg:items-center">
+        {/* original: 173x492 narrow, left */}
+        <div className="relative hidden lg:block aspect-[173/492] w-full">
+          <Image src={IMG.closingNarrow} alt="" fill sizes="15vw" className="object-cover" />
+        </div>
+        <div className="text-center">
+          <p className="eyebrow mb-6">{closing.eyebrow}</p>
+          <h2 className="text-[clamp(1.85rem,3.4vw,2.5rem)] mb-6">{closing.heading}</h2>
+          <p className="text-ink-soft mb-10 max-w-[48ch] mx-auto">{closing.body}</p>
+          <a
+            href="mailto:hello@example.com"
+            className="eyebrow !text-surface inline-block bg-primary px-8 py-4 hover:bg-accent transition-colors"
+          >
+            {closing.cta}
+          </a>
+        </div>
+        {/* original: 504x610, right */}
+        <div className="relative aspect-[504/610] w-full">
+          <Image src={IMG.closingMain} alt="" fill sizes="(max-width:1024px) 100vw, 30vw" className="object-cover" />
+        </div>
       </div>
     </section>
   );
