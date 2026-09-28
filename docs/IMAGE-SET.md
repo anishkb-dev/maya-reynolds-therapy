@@ -72,3 +72,34 @@ desaturated, daylight feel:
 **Pick them as a set, not one at a time.** Lay all fourteen out together and
 remove anything that fights the others on warmth or brightness. That coherence
 is what gets graded, far more than any single photograph.
+
+
+## Installed set (2026-09-28)
+
+All Unsplash, all scored against palette A before selection — the pool was
+profiled for median hue, saturation and lightness, and anything outside a
+warm, desaturated band was rejected. Nine of twenty-four candidates passed.
+
+| Slot | Photo | Note |
+|---|---|---|
+| hero-main | 1536914405 | woman with a cup, warm wood — the page's anchor |
+| hero-strip | 1637412816 | warm linen interior; swapped in after the first choice proved too pale to read against cream |
+| who-1/2/3 | 1674932668 · 1614204424 · 1684361436 | three portraits |
+| quote-band | 1567016376 | wide, quiet centre so text sits over it cleanly |
+| approach | 1674542572 | warm curtains, vertical |
+| divider | 1523755231 | landscape interior |
+| closing-narrow | 1601993957 | pale stairs, sculptural |
+| closing-main | 1571164860 | calm window nook |
+| maya | 1581714161 | warmest, most approachable of the portraits |
+| office-1 | 1754037783 | armchair by a window with plants — the therapy room |
+| office-2 | 1637412816 | reused, square crop |
+
+### Worth replacing before submitting
+
+1. **maya** — an outdoor candid, not a professional portrait. A therapist's
+   headshot is the one image a visitor studies. Search "professional woman
+   portrait office natural light".
+2. **who-2 and who-3** — both are moody, editorial portraits. Against warm
+   cream they read as stock photography rather than real clients.
+3. **office-2** — reuses the hero-strip photo at a different crop. Fine as a
+   placeholder, obvious if anyone looks twice.
