@@ -19,13 +19,17 @@
    be legible as small text; --color-accent stays for fills and
    large type.
 
-   ACTIVE: Option A. Swap by replacing this :root block.
---------------------------------------------------------------- */
+   CHOSEN: Clay & Oat.
+   Analogous — the interface sits inside the photographs' own hue
+   family, so image and UI read as one continuous surface rather than
+   artwork pasted onto a background. Warm, low-contrast, unhurried,
+   which suits a practice whose own words are "warm, collaborative
+   and grounded".
 
-/* OPTION A — Clay & Oat
-   Analogous: the UI sits inside the photographs' own hue family, so
-   image and interface read as one surface. Safest, warmest.
-   body 14.7:1 · soft 6.7:1 · accent 5.3:1 · on primary 7.4:1        */
+   Contrast (WCAG AA needs 4.5:1 for body text):
+     body 14.7:1 · secondary text 6.7:1 · accent as link 5.3:1
+     text on primary 7.4:1 · text on sand 11.8:1
+--------------------------------------------------------------- */
 :root {
   --color-ink:        #26221D;
   --color-ink-soft:   #5E564C;
@@ -37,42 +41,6 @@
   --color-surface-2:  #FFFFFF;
   --color-line:       #DED5C8;
 }
-
-/* OPTION B — Eucalyptus
-   Warm photography against a cool green interface. This is the
-   original's strategy (warm imagery, cool accent) at a different
-   hue, so it flatters the same kind of pictures.
-   body 14.2:1 · soft 6.2:1 · accent-ink 4.6:1 · on primary 7.9:1
-:root {
-  --color-ink:        #22261F;
-  --color-ink-soft:   #575E52;
-  --color-primary:    #3B5147;
-  --color-accent:     #A8703E;
-  --color-accent-ink: #976437;
-  --color-secondary:  #E4E5DD;
-  --color-surface:    #F7F6F1;
-  --color-surface-2:  #FFFFFF;
-  --color-line:       #D6D8CD;
-}
-*/
-
-/* OPTION C — Ink & Ochre
-   Dark-forward and editorial. The least common look on therapy
-   sites, so the most distinctive — but check it still reads as calm
-   rather than severe before committing.
-   body 15.5:1 · soft 6.8:1 · accent-ink 4.6:1 · on primary 13.6:1
-:root {
-  --color-ink:        #1E1B14;
-  --color-ink-soft:   #5B5447;
-  --color-primary:    #2B2619;
-  --color-accent:     #C08A45;
-  --color-accent-ink: #8E6633;
-  --color-secondary:  #EAE4D8;
-  --color-surface:    #F6F3EC;
-  --color-surface-2:  #FFFFFF;
-  --color-line:       #DBD3C3;
-}
-*/
 
 @theme inline {
   --color-ink: var(--color-ink);

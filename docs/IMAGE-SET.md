@@ -14,6 +14,14 @@ Building the interface from those numbers is why the page hangs together.
 It's the same trick the original uses: its cream and muted teal come straight
 out of its beach photography.
 
+## Chosen palette — Clay & Oat
+
+`#F9F6F3` surface · `#E6DED2` sand · `#9C5228` accent · `#6B4A33` primary · `#26221D` ink
+
+Analogous to the photography, so the images must stay **warm**. A cool or
+blue-toned photograph will fight this palette — check each one against the
+page before committing to it.
+
 ## Candidates
 
 Append `?w=1600&q=80&fm=jpg` for a web-sized download.
