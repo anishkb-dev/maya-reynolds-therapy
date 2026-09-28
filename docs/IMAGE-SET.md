@@ -84,7 +84,7 @@ warm, desaturated band was rejected. Nine of twenty-four candidates passed.
 |---|---|---|
 | hero-main | 1536914405 | woman with a cup, warm wood — the page's anchor |
 | hero-strip | 1637412816 | warm linen interior; swapped in after the first choice proved too pale to read against cream |
-| who-1/2/3 | 1674932668 · 1614204424 · 1684361436 | three portraits |
+| who-1/2/3 | 1635617210 · 1601907560 · 1662038271 | re-picked as a set: all warm morning light through window blinds |
 | quote-band | 1567016376 | wide, quiet centre so text sits over it cleanly |
 | approach | 1674542572 | warm curtains, vertical |
 | divider | 1523755231 | landscape interior |
@@ -99,7 +99,17 @@ warm, desaturated band was rejected. Nine of twenty-four candidates passed.
 1. **maya** — an outdoor candid, not a professional portrait. A therapist's
    headshot is the one image a visitor studies. Search "professional woman
    portrait office natural light".
-2. **who-2 and who-3** — both are moody, editorial portraits. Against warm
-   cream they read as stock photography rather than real clients.
+2. ~~who-2 and who-3~~ — **fixed 2026-09-28.** The first trio was three
+   unrelated studio portraits: lightness 30, 63 and 74, three different
+   backgrounds, three different moods. Re-picked against a coherence score
+   that minimises spread in hue, saturation and lightness across the set
+   rather than rating each photo alone. The replacements sit at lightness
+   50–67, hue 29–45, and share one visual idea — warm light through blinds,
+   which is also what Maya's profile describes her room as.
+
+   Worth knowing: portrait searches on Unsplash skew low-key. Fifteen of
+   twenty candidates came back under 30% lightness, which will never sit on
+   a cream page. Searching for the *light* rather than the *subject* is what
+   produced a usable set.
 3. **office-2** — reuses the hero-strip photo at a different crop. Fine as a
    placeholder, obvious if anyone looks twice.
