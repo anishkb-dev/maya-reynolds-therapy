@@ -34,7 +34,7 @@ export const hero = {
   headingBefore: "Anxiety & trauma therapy in Santa Monica, for people who look",
   headingAccent: "fine",
   headingAfter: "on the outside.",
-  sub: "You can look completely fine from the outside and still feel wired, exhausted, or stuck on something you've never really put down. I work with adults in Santa Monica — often high-achieving professionals and creatives — on anxiety, panic, trauma and burnout, at a pace you set.",
+  sub: "You can look completely fine from the outside and still feel wired, exhausted, or stuck on something you've never really put down. I work with adults — often high-achieving professionals and creatives — on anxiety, panic, trauma and burnout, at a pace you set.",
   cta: "Book a free 15-minute call",
 };
 
